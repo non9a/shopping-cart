@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="person.css">
+
+</head>
+<body>
+   
+    <span class="main_bg"></span>
+    <div class="container">
+ 
+      
+        <section class="front">
+            <img src="images/pose-oh-crap-what-did-i-just-do2.png" alt="image">
+            <div>
+                <p>買方信箱帳號</p>
+            </div>
+        </section>
+
+        <section class="main">
+            <div>
+                <ul class="btns">
+                    <li class="btn">個人資訊</li>
+                    <li class="btn">購買查詢</li>
+                     
+                </ul>
+
+                <div>
+                    <div class="details active">
+                        <div class="present">
+                            <h5>個人資訊</h5>
+                            <button class="edit-btn">編輯個人資訊</button>
+                            <ul>姓名:</ul>
+                            <ul>性別:</ul>
+                            <ul>電話:</ul>
+                            <ul>地址:</ul>                           
+                        </div>
+
+                        <div class="edit">
+                        <form action="person.html" method="post">
+                            <p>請填寫個人資訊</p>
+                            <label for="name">姓名
+                            <input type="text" name="name">
+                            </label>
+                            <p>性別</p>
+                            <label for="gender">
+                                <input type="radio" name="gender">男生
+                            </label>
+                            <label for="gender">
+                                <input type="radio" name="gender">女生
+                            </label><br>
+                            <label for="number">電話
+                                <input type="tel" name="number">
+                            </label><br>
+                            <label for="addr">地址
+                                <input type="text" name="addr">
+                            </label>
+                            <button class="submit-btn">填寫完成</button>
+                        </form>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        <div class=""></div>
+                            <h5>購買查詢</h5>
+                            <p>
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>日期</th>
+                                            <th>單號</th>
+                                            <th>金額</th>
+                                            <th>數量</th>
+                                            <th>狀態</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                          
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </p>                        
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        
+    </div>
+    <script src="person.js" defer></script>
+</body>
+</html>

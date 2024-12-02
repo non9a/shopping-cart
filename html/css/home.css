@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    position: fixed;  /* 固定位置 */
+    top: 0;  /* 固定在頂部 */
+    left: 0;  /* 固定在左邊 */
+    width: 100%;  /* 宽度填滿整個屏幕 */
+    background-color: #664b3a;  /* 背景色 */
+    color: #DBC6B5;  /* 文字顏色 */
+    z-index: 1000;  /* 確保它在其他元素之上 */
+}
+/* 設定 nav 中的 h1 標題樣式 */
+nav h1 {
+    color: #DBC6B5;
+    position: relative;
+    display: flex;  /* 使用 flexbox 來排列文字和圖片 */
+    align-items: center;  /* 使文字和圖片垂直居中 */
+    justify-content: flex-start;  /* 使內容靠左對齊 */
+    line-height: 80px;  /* 調整為 header 高度 */
+    
+    background-repeat: no-repeat;
+    background-position: left center;  /* 背景圖片左對齊 */
+    background-size: contain;  /* 讓背景圖片自動調整大小，保持比例 */
+    width: 210px;  /* 設定合適的寬度 */
+    height: 80px;  /* 設定高度為 header 高度 */
+    padding-left: 40px;  /* 讓文字與圖片有適當的間距 */
+}
+
+
+nav h1 ::before {
+    content: "";  /* 用於圖片背景 */
+    display: inline-block;
+    width: 40px;  /* 圖片的寬度 */
+    height: 40px;  /* 圖片的高度 */
+    background-image: url("../img/restaurant.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;  /* 文字與圖片之間的間距 */
+}
+nav ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+nav li {
+    color: #DBC6B5;
+    display: inline;
+    margin-right: 4vw;
+}
+nav a {
+    color:#DBC6B5;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav a img {
+    width: 30px;  /* 設定圖片寬度 */
+    height: auto; /* 保持圖片比例 */
+    vertical-align: middle; /* 垂直對齊圖片 */
+  }
+#cart-icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;  /* 設定圖片寬度 */
+    height: auto; /* 保持圖片比例 */
+    vertical-align: middle; /* 垂直對齊圖片 */
+  }
+  #cart-count {
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+/* Section */
+.start {
+    background-color: #DBC6B5;
+    color: white;
+    height: 75vh;
+    background-image: url("../photo/cover.jpg");/*跳出資料夾 再轉入其他資料夾*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;  /* 垂直排列 */
+    justify-content: center;  /* 垂直居中 */
+    align-items: center;      /* 水平居中 */
+    text-align: center;       /* 讓文本在容器內居中 */
+}
+.start h2 {
+    color: #664b3a;
+    font-size: 60px;
+    margin-bottom: 20px;  /* 為元素之間添加一些間距 */
+}
+.start p {
+    color: #664b3a;
+    font-size: 24px;
+    margin: 25px 0;
+}
+/* ---------------------------搜尋框樣式 ----------------------*/
+.search-container {
+    display: flex;
+    justify-content: flex-start;  /* 水平排列並向左對齊 */
+    align-items: center;
+    margin-top: 150px;
+    gap: 0;  /* 移除元素之間的間距 */
+}
+
+.search-form{
+    display: flex;
+}
+
+.search-box, .date-picker, .time-picker, .people-picker {
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    borders: 0px;
+    margin-left: 0;
+}
+
+.search-box {
+    width: 600px;  /* 設定搜尋框的寬度 */
+}
+
+.date-picker {
+    width: 180px;  /* 設定日期、時間、人數選擇框的寬度 */
+   
+}
+.time-picker {
+    width: 150px;  /* 設定日期、時間、人數選擇框的寬度 */
+   
+}
+.people-picker {
+    width: 100px;  /* 設定日期、時間、人數選擇框的寬度 */
+   
+}
+
+
+.search-button {
+    padding: 15px 30px;
+    background-color: #664b3a;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0;  /* 按鈕與其他框之間的間距 */
+}
+
+.search-button:hover {
+    background-color: #8a6d55;
+}
+/*-------------------slogan footer----------------------------*/
+
+.slogan {
+    background-color: #e0552c;
+    color: #DBC6B5;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;  /* 水平排列並給元素之間添加空間 */
+    align-items: center;  /* 垂直居中對齊 */
+    gap: 20px;  /* 可以調整圖片和文字之間的間距 */
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+.slogan div {
+    display: flex;
+    flex-direction: column;  /* 讓圖片和文字垂直排列 */
+    align-items: center;  /* 使圖片和文字水平居中對齊 */
+}
+
+
+/* 設定圖片的大小 */
+.slogan img {
+    width: 30%;  /* 圖片縮小 50% */
+    height: auto;  /* 保持圖片的比例 */
+}
+
+/* 設定文字顏色 */
+.slogan h3 {
+    color: white;  /* 文字顏色設為白色 */
+    margin-top: 10px;  /* 讓文字與圖片之間有些許間距 */
+}
+
+footer {
+    background-color:#83818100;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+/*-----------------food blog-------------------------*/
+.food, .blog {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;  /* 確保兩者寬度一致 */
+    height: 500px; /* 設定相同的高度 */
+}
+
+.food img, .blog img {
+    width: 50%;  /* 圖片寬度為容器的一半 */
+    height: 100%; /* 圖片高度填滿容器 */
+    object-fit: cover; /* 保持圖片比例並填滿容器 */
+}
+
+.info {
+    background-color: white;
+    width: 50%;  /* 文字區域寬度為容器的一半 */
+    padding-left: 20px; /* 文字區域與圖片之間的間距 */
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+    text-align: center;   /* 文字水平居中 */
+}
+
+.info h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+/*------------------------rank---------------------------*/
+.rank {
+    background-color: #DBC6B5;
+    display: flex;
+    justify-content: space-between; /* 讓卡片之間保持適當的間距 */
+    flex-wrap: wrap; /* 讓卡片在屏幕較小時換行 */
+    gap: 20px; /* 設定卡片之間的間距 */
+    width: 100%; /* 讓容器寬度為100% */
+    margin: 0 auto; /* 使容器在大屏幕上居中顯示 */
+    padding: 70px 30px;;
+}
+
+.card {
+    width: 18rem; /* 保持每個卡片的固定寬度 */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* 統一圖片高度 */
+
+}
+.card-body {
+    text-align: center;  /* 水平居中 */
+}
+
+
+/*---------------------------new--------------------------------*/
+.new {
+    background-color: #DBC6B5;
+    display: flex;
+    justify-content: space-between; /* 讓卡片之間保持適當的間距 */
+    flex-wrap: wrap; /* 讓卡片在屏幕較小時換行 */
+    gap: 20px; /* 設定卡片之間的間距 */
+    width: 100%; /* 讓容器寬度為100% */
+    margin: 0 auto; /* 使容器在大屏幕上居中顯示 */
+    padding: 70px 30px;;
+}

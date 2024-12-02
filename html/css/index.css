@@ -1,0 +1,21 @@
+/*首頁模式*/
+/*版心*/
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+/*頂端區域*/
+.header {
+    height: 100px;
+    background-color: rgb(198, 211, 235);
+}
+
+.header .wrapper {
+    padding-top: 29px;
+    display: flex;
+}
