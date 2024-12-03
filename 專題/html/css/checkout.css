@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+body {
+ background-color: #DBC6B5;
+}
+
+/*-------------------------nav----------------------*/
+nav {
+    position: fixed;  /* 固定位置 */
+    top: 0;  /* 固定在頂部 */
+    left: 0;  /* 固定在左邊 */
+    width: 100%;  /* 宽度填滿整個屏幕 */
+    background-color: #664b3a;  /* 背景色 */
+    color: #DBC6B5;  /* 文字顏色 */
+    z-index: 1000;  /* 確保它在其他元素之上 */
+  }
+  /* 設定 nav 中的 h1 標題樣式 */
+  nav h1 {
+    color: #DBC6B5;
+    position: relative;
+    display: flex;  /* 使用 flexbox 來排列文字和圖片 */
+    align-items: center;  /* 使文字和圖片垂直居中 */
+    justify-content: flex-start;  /* 使內容靠左對齊 */
+    line-height: 80px;  /* 調整為 header 高度 */
+    
+    background-repeat: no-repeat;
+    background-position: left center;      /* 背景圖片左對齊 */
+    background-size: contain;      /* 讓背景圖片自動調整大小，保持比例 */
+    width: fit-content;    /* 設定合適的寬度 */
+    height: 80px;      /* 設定高度為 header 高度 */
+    padding-left: 40px;      /* 讓文字與圖片有適當的間距 */
+}
+
+
+nav h1::before {
+    content: "";  /* 用於圖片背景 */
+    display: inline-block;
+    width: 40px;  /* 圖片的寬度 */
+    height: 40px;  /* 圖片的高度 */
+    background-image: url("../img/restaurant.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;  /* 文字與圖片之間的間距 */
+}
+
+
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 200px auto;
+    display: flex; /* 使用flexbox來排列 */
+    justify-content: space-between; /* 子元素之間保持間距 */
+    gap: 20px; /* 讓元素之間有間隔 */
+}
+
+.checkout-form, .cart-details {
+    background-color: white;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* 使兩個區塊平分空間 */
+    min-width: 280px; /* 設置最小寬度，避免過於擁擠 */
+}
+
+
+.checkout-form fieldset label {
+    margin-right: 5px; 
+    font-size: 20px;
+}
+.checkout-form fieldset {
+    display: flex; 
+    justify-content: space-around;   
+    /* flex-direction: row;   */
+    gap: 10px;  
+    align-items: flex-start; 
+}
+fieldset .pay-form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.checkout-form fieldset legend {
+    width: 100%;  
+    font-weight: bold;  
+    margin-bottom: 10px;  
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.checkout-form label, .checkout-form input, .checkout-form button {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.checkout-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-form button {
+    background-color: #ccc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-form button:hover {
+    background-color: #ffffff;
+}
+
+.checkout-form input[type="radio"]{
+    width: fit-content;
+}
+
+
+/* 放大購物車明細標題 */
+#cart-details h4 {
+    font-size: 26px;  /* 增大標題字體 */
+    margin-bottom: 15px;  /* 增加標題底部間距 */
+
+}
+
+/* 放大總計文字 */
+.cart-total p {
+    font-size: 24px;  /* 增加總計字體 */
+    margin-bottom: 15px;  /* 增加底部間距 */
+}
+
+/* 購物車項目的樣式調整 */
+#cart-items-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px; /* 為列表項目和總計之間增加間距 */
+}
+
+#cart-items-list li {
+    font-size: 24px;  /* 放大每個購物車項目的文字 */
+    margin-bottom: 10px; /* 為每個項目添加底部間距 */
+    line-height: 1.6; /* 增加行間距，增強可讀性 */
+}
+
+/* 如果需要，可以對購物車內容進行進一步的樣式調整 */
+.cart-details {
+    padding: 40px;  /* 增加內邊距 */
+    font-size: 24px;  /* 調整整體字體 */
+}
+
+#close-cart:hover, #continue-shopping:hover {
+    background-color: #ffffff;
+}
+
+
+
+/*--------------footer-------------*/
+footer {
+    background-color:#83818100;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
